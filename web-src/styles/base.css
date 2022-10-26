@@ -1,0 +1,59 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'Comic Code Ligatures';
+    src: url('../fonts/ComicCode.otf') format('opentype');
+}
+
+body {
+    font-size: 200%;
+}
+
+#root {
+    font-family: 'Comic Code Ligatures', monospace;
+    /* position: absolute;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+}
+
+#subtitles {
+    font-size: 0.9em;
+}
+
+#root > a {
+    text-decoration: none;
+    font-weight: 900;
+    width: 2.7rem;
+    line-height: 2.2rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.15rem;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid black;
+}
+
+.board {
+    background-color: darkgray;
+    padding: 1rem;
+}
+
+.field {
+    background-color: #f2f2f2;
+}
+
+.one   { color: blue; }
+.two   { color: green; }
+.three { color: red; }
+.four  { color: purple; }
+.five  { color: maroon; }
+.six   { color: rgb(43, 168, 156); }
+.seven { color: black; }
+.eight { color: #585858; }
+
+.mine {
+    background-color: crimson;
+}
+
+.flag {
+    background-color: limegreen;
+}
