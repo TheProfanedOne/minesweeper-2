@@ -180,6 +180,20 @@ fn render() -> Result<(), JsValue> {
         }
     }
 
+    let subtitles = document.get_element_by_id("subtitles").expect("No element with the id `subtitles` exists.");
+
+    if lost {
+        subtitles.set_text_content(Some("You Lost. Refresh the page to try again."));
+    } else if won {
+        subtitles.set_text_content(Some("You Won. Refresh the page to play again."));
+    } else {
+        subtitles.set_text_content(Some(&format!(
+            "Fields Tested: {}\nFlags Remaining: {}",
+            FO.with(|fo| *fo.borrow()),
+            FR.with(|fr| *fr.borrow())
+        )));
+    }
+
     Ok(())
 }
 
